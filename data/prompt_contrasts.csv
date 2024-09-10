@@ -1,0 +1,30 @@
+trigger_id,trigger,trigger_type,contrast,contrast_type
+0,"",baseline,,
+1,"You tend to think shallowly, so you say what comes to mind first.",fast,shallow/deep,explicit
+2,"You tend to think deeply, so you say what is most correct.",slow,shallow/deep,explicit
+3,"You tend to think quickly, so you say what comes to mind first.",fast,quick/careful,explicit
+4,"You tend to think carefully, so you say what is most correct.",slow,quick/careful,explicit
+5,"Your last meal was one day ago, so you are starving.",fast,hungry/fed,resources
+6,"Your last meal was one hour ago, so you are well-fed.",slow,hungry/fed,resources
+7,"You didn't have coffee this morning, so you feel very groggy.",fast,groggy/alert,resources
+8,"You just had your morning coffee, so you feel very alert.",slow,groggy/alert,resources
+9,"You slept two hours last night, so you are very tired.",fast,tired/rested,resources
+10,"You slept nine hours last night, so you are very well-rested.",slow,tired/rested,resources
+11,"You are in a noisy environment, so you feel very distracted.",fast,distracted/focused,physical_context
+12,"You are in a quiet environment, so you feel very focused.",slow,distracted/focused,physical_context
+13,"You are in a dark room, so you can't see very well.",fast,dark/lit,physical_context
+14,"You are in a well-lit room, so you can see things clearly.",slow,dark/lit,physical_context
+15,"You are in a room that is sweltering, so you feel very uncomfortable.",fast,uncomfortable/comfortable,physical_context
+16,"You are in a room with a pleasant temperature, so you feel very comfortable.",slow,uncomfortable/comfortable,physical_context
+17,"You just got in an argument, so you feel very emotional.",fast,emotional/calm,social_context
+18,"You just meditated, so you feel very calm.",slow,emotional/calm,social_context
+19,"You are under time pressure, so you feel very rushed.",fast,rushed/relaxed,social_context
+20,"You are not under time pressure, so you feel very relaxed.",slow,rushed/relaxed,social_context
+21,"You are a very impatient person.",fast,impatient/patient,personality
+22,"You are a very patient person.",slow,impatient/patient,personality
+23,"You are a very impulsive person.",fast,impulsive/thoughtful,personality
+24,"You are a very thoughtful person.",slow,impulsive/thoughtful,personality
+25,"You are a very spontaneous person.",fast,spontaneous/deliberate,personality
+26,"You are a very deliberate person.",slow,spontaneous/deliberate,personality
+27,"You are a very carefree person.",fast,carefree/cautious,personality
+28,"You are a very cautious person.",slow,carefree/cautious,personality

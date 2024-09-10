@@ -1,3 +1,6 @@
+src/hf_token.txt
+slurm
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
