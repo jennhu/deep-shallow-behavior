@@ -9,7 +9,7 @@ CACHE_DIR="/path/to/huggingface_cache"
 echo "$MODEL / $TASK"
 
 # NO system prompt
-python src/run_behavioral_experiment.py \
+python behavioral/run_behavioral_experiment.py \
     --model $MODEL \
     --task $TASK \
     --stimuli_dir data/stimuli \
