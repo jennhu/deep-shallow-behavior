@@ -66,7 +66,5 @@ Our logit lens analysis uses the `nnsight` library. Please see their
 
 To reproduce the figures from the paper, run the notebooks in the `analysis`
 folder:
-- `behavioral.ipynb` will reproduce Figure 1 (the behavioral
-results)
-- `logit_lens.ipynb` will reproduce Figures 2a and 2b
-(the logit lens results)
+- `behavioral.ipynb` will reproduce Figure 1 (the behavioral results)
+- `logit_lens.ipynb` will reproduce Figure 2 (the logit lens results)
