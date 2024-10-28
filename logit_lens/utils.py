@@ -51,7 +51,6 @@ def make_chat_prompt(
 
     # Cognitive reflection tasks (Hagendorff et al. 2023)
     if task.startswith("crt"):
-        # user_msg = "Please answer the following question. " + query.strip()
         user_msg = "Your task is to answer the following question. " + query.strip()
     else:
         raise ValueError(f"Unknown task: {task}")

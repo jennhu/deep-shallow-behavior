@@ -1,6 +1,17 @@
-# Behavioral manipulations of deep and shallow thinking in a single forward pass
+# Deep and shallow thinking in a single forward pass
 
-This repository contains code and data for the BehavioralML @ NeurIPS Workshop paper.
+This repository contains code and data for the paper "Deep and shallow thinking in a single forward pass", 
+published at the [BehavioralML Workshop @ NeurIPS 2024](https://sites.google.com/view/behavioralml/home?authuser=0). 
+
+If you find the code or data helpful, please cite the paper as follows:
+```bibtex
+@inproceedings{hu_behavioral_2024,
+    title={Deep and shallow thinking in a single forward pass}, 
+    author={Jennifer Hu and Michael Franke},
+    year={2024},
+    booktitle={Workshop on Behavioral Machine Learning @ NeurIPS 2024}
+}
+```
 
 The materials are organized into the following main folders:
 - `analysis`: contains Jupyter notebooks for analyzing the model outputs and generating figures
@@ -12,7 +23,7 @@ The materials are organized into the following main folders:
 **Please note:** throughout the code and data, you will see labels such as "fast" and "slow".
 These conceptually correspond to the terms "shallow" and "deep" used in the paper.
 
-## Stimuli: Cognitive Reflection Task
+## 1. Stimuli: Cognitive Reflection Task
 
 The stimuli for the CRT dataset (Hagendorff et al. 2023) are found in the files
 `crt*.csv` in the folder `data/stimuli`. 
@@ -22,7 +33,7 @@ Please note a few small differences from the original source material:
 - Fixed a few typos (e.g., "1 minutes" --> "1 minute")
 - Standardized all answers given in dollar values to $X.XX format
 
-## Running behavioral experiments
+## 2. Behavioral experiments
 
 To evaluate a given model on a given task, run:
 ```bash
@@ -36,16 +47,18 @@ where you would like to save the downloaded model checkpoints.
 By default, the script will use user prompts and save output CSV files to the folder
 `model_output/no-system-prompt`. Each result file is named `<TASK>_<MODEL_ID>.csv`.
 If you would like to change the arguments to the experiment,
-please see the `run_behavioral_experiment.py` script in the `behavioral` folder.
+please see the `behavioral/run_behavioral_experiment.py` script.
 
 If you evaluate gated Huggingface models, you will need to specify your
 Huggingface token. By default, the code looks for a file called `hf_token.txt`
 which contains your token (this file is ignored by git).
 
-Our behavioral analysis uses the `minicons` library. Please see their
+### Dependencies
+
+Our behavioral analysis uses the `minicons` library. Please see the
 [documentation](https://github.com/kanishkamisra/minicons) for more details.
 
-## Running logit lens experiments
+## 3. Logit lens experiments
 
 To run the logit lens analysis on a given model and task, run:
 ```bash
@@ -57,12 +70,16 @@ and `<TASK>` must be one of `crt1`, `crt2`, or `crt3`.
 Before running the script, please point the `CACHE_DIR` variable in the script to the path
 where you would like to save the downloaded model checkpoints.
 
-In our paper, we only report results from Llama-2 7B (`meta-llama/Llama-2-7b-chat-hf`).
+In our paper, we only report results from Llama-2 7B (`meta-llama/Llama-2-7b-chat-hf`). If you use other models, you may need to modify
+the `conditional_score_all_layers` function inside `logit_lens/evaluate.py`,
+since it is specific to the model architecture.
 
-Our logit lens analysis uses the `nnsight` library. Please see their
+### Dependencies
+
+Our logit lens analysis uses the `nnsight` library. Please see the
 [documentation](https://nnsight.net/) for more details.
 
-## Reproducing figures
+## 4. Reproducing figures
 
 To reproduce the figures from the paper, run the notebooks in the `analysis`
 folder:

@@ -1,5 +1,5 @@
 # File: evaluate.py
-# Description: helper functions for performing LM evaluation
+# Description: core functions for implementing LM evaluation
 
 import pandas as pd
 pd.options.mode.chained_assignment = None
