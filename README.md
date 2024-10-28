@@ -5,7 +5,7 @@ published at the [BehavioralML Workshop @ NeurIPS 2024](https://sites.google.com
 
 If you find the code or data helpful, please cite the paper as follows:
 ```bibtex
-@inproceedings{hu_behavioral_2024,
+@inproceedings{hu_deep_2024,
     title={Deep and shallow thinking in a single forward pass}, 
     author={Jennifer Hu and Michael Franke},
     year={2024},
